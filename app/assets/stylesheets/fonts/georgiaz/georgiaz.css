@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GeorgiaBoldItalic';
+    src: url('georgiaz.eot');
+    src: url('georgiaz.eot') format('embedded-opentype'),
+         url('georgiaz.woff') format('woff'),
+         url('georgiaz.ttf') format('truetype'),
+         url('georgiaz.svg#GeorgiaBoldItalic') format('svg');
+}

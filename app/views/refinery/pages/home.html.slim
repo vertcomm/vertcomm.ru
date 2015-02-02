@@ -1,0 +1,8 @@
+#main
+  ul#mainGallery style='height: 620px;'
+    - sizes=%w( 153x153#c 310x310#c 153x153#c 153x153#c 153x153#c 153x153#c 310x153#c 153x153#c  310x153#c 153x153#c 153x153#c 310x310#c   153x153#c  310x153#c 153x153#c)
+    - @page.images.each_with_index do |image, i|
+      - size = sizes[i]
+      li id="img-#{i+1}"
+        a href="/portfolio/#{image.refinery_blog_posts.first.id unless image.refinery_blog_posts.empty? }"
+          = image_tag image.thumbnail(geometry: size).url

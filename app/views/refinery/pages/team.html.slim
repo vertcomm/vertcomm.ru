@@ -1,0 +1,27 @@
+#team
+  ul#teamList.clearfix
+    - @people.each do |p|
+      li: a href="#"
+        .normal
+          = image_tag p.avatar.thumbnail(geometry: "227x227#c").url if p.avatar
+        .hover
+          .cell
+            h2
+              ="#{p.first_name}"
+              br
+              ="#{p.last_name}"
+            h3=p.short_comment
+
+
+        .modal
+          .container-modal.clearfix
+            a.close href="#" ×
+            .left
+              = image_tag p.big_avatar.thumbnail(geometry: "315x600>").url if p.big_avatar
+            .right
+              h2="#{p.first_name} #{p.last_name}"
+              h3=p.short_comment
+              = raw p.full_comment
+    - @count.times do
+      li.cap
+

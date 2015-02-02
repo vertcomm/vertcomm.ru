@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GaramondBold';
+    src: url('garabd.eot');
+    src: url('garabd.eot') format('embedded-opentype'),
+         url('garabd.woff') format('woff'),
+         url('garabd.ttf') format('truetype'),
+         url('garabd.svg#GaramondBold') format('svg');
+}

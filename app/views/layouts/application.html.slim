@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title = browser_title(yield(:title))
+    = raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present?
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = raw %(<link rel="canonical" content="#{@canonical}" />) if @canonical.present?
+    = csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend
+  body oncontextmenu="return false;"
+    #wrapper
+      header
+        - href = Refinery::Resource.where(:file_name => 'Presentation_Vertcomm.pdf').first.url || '#'
+        a#logo href="/"
+        /a#presentation target='_blank' onclick="window.open('#{href}', 'newwin');" href="#" Презентация
+        a#presentation target='_blank'  href="/Presentation_Vertcomm.pdf" Презентация
+        = raw copywriting('slogan', { :phrase_type => 'wysiwyg' })
+        = raw copywriting('phone', { :phrase_type => 'wysiwyg' })
+        a.fb href="#{ raw copywriting('facebook_url', { :default => '#' })}"
+        a.yt href="#{ raw copywriting('youtube_url', { :default => '#' })}"
+        menu.main_menu
+          = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+
+
+
+
+      = yield
+      #push
+    footer
+      = raw copywriting('footer', { :phrase_type => 'wysiwyg' })

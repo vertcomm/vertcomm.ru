@@ -1,0 +1,16 @@
+#service.clearfix
+  ul#serviceMenu.clearfix
+    li: a href="/"
+    - Refinery::Page.where(:slug => 'services').first.children.each do |page|
+      li class="#{'active' if @page==page}"
+        = link_to page.title, "/services/#{page.slug}", class: page.slug
+
+  #content
+    h1=@page.title
+    = raw @page.content_for(:body)
+    - unless Refinery::Blog::Category.where(title: @page.title).empty?
+      a.btn href="#{"/portfolio/categories/#{Refinery::Blog::Category.where(title: @page.title).first.id}"}" примеры
+
+  ul.pics
+    - @page.images.each do |image|
+      li: img src="#{image.thumbnail(geometry: "153x153#c").url}"

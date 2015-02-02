@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GaramondItalic';
+    src: url('garait.eot');
+    src: url('garait.eot') format('embedded-opentype'),
+         url('garait.woff') format('woff'),
+         url('garait.ttf') format('truetype'),
+         url('garait.svg#GaramondItalic') format('svg');
+}

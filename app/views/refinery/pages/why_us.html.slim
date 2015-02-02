@@ -1,0 +1,18 @@
+#why.clearfix
+  - @page.children.each_with_index  do |page, i|
+    .col
+      - if i%2==0
+        .row.green.top
+          h2
+            = image_tag page.images.first.thumbnail.url
+            = page.title
+        .row
+          =raw page.content_for(:body)
+      - else
+        .row
+          =raw page.content_for(:body)
+        .row.green.bottom
+          h2
+            = image_tag page.images.first.thumbnail.url
+            = page.title
+

@@ -1,0 +1,4 @@
+#clients
+  =image_tag(@page.images.first.thumbnail(geometry: "813x673#c").url, class: 'bg') unless @page.images.empty?
+  .text1 = raw @page.content_for(:text_left)
+  .text2 = raw @page.content_for(:text_right)

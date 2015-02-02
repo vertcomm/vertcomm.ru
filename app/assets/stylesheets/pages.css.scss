@@ -1,0 +1,908 @@
+.fonts {
+  font-family: 'GaramondBold';
+  font-family: 'GaramondRegular';
+  font-family: 'GaramondItalic';
+  font-family: 'ArialNarrow';
+  font-family: 'ArialNarrowItalic';
+  font-family: 'ArialNarrowBold';
+  font-family: 'ArialNarrowBoldItalic';
+  font-family: 'ArialRegular';
+  font-family: 'ArialBold';
+  font-family: 'ArialBoldItalic';
+  font-family: 'ArialItalic';
+  font-family: 'ArialBlack';
+  font-family: 'GeorgiaRegular';
+  font-family: 'GeorgiaBold';
+  font-family: 'GeorgiaItalic';
+  font-family: 'GeorgiaBoldItalic';
+}
+
+$green: '#4fa547;';
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  font-family: 'GeorgiaRegular';
+}
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: -30px auto -80px;
+  width: 1000px;
+
+}
+#push {
+  height: 110px;
+}
+
+footer {
+  font-family: 'ArialRegular';
+  text-align: center;
+  background: #efefef;
+  width: 1000px;
+  margin: 0 auto;
+  height: 50px;
+  padding: 25px 0 30px;
+  line-height: 1.5em;
+  font-size: 13px;
+  a {
+    color: inherit;
+  }
+}
+
+
+header {
+  position: relative;
+  height: 250px;
+  a#presentation {
+    position: absolute;
+    display: block;
+    background: #4fa547;
+    width: 150px;
+    top: 160px;
+    right: 0px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  #logo {
+    position: absolute;
+    left: 40px;
+    top: 48px;
+    background: url("logo-big.png");
+    width: 192px;
+    height: 154px;
+  }
+  p.slogan {
+    position: absolute;
+    top: 74px;
+    left: 330px;
+    width: 360px;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.5em;
+  }
+  p.phone{
+    font-family: 'GaramondBold';
+    position: absolute;
+    top: 65px;
+    right: 60px;
+    color: #000;
+    font-size: 33px;
+    span {
+      font-family: 'GaramondRegular';
+      position: relative;
+      top: -13px;
+      left: -8px;
+      font-size: 16px;
+    }
+  }
+  a.fb {
+    background: url("fb.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 111px;
+    right: 108px;
+  }
+  a.yt {
+    background: url("yt.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 111px;
+    right: 65px;
+  }
+  menu {
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    width: 960px;
+    background: #000;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: 'GaramondBold';
+      z-index: 1;
+      &:hover, &.selected {
+        background: #4fa547;
+        a:before {display: none}
+        position: relative;
+        z-index: 2;
+      }
+      &:first-child {
+        a {
+          width: 20px;
+          background: url("home-white.png") no-repeat center center;
+          color: transparent;
+        }
+        a:before {display: none;}
+      }
+      a {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 10px 20px;
+        &:before {
+          z-index: 0;
+          content: '|';
+          color: #fff;
+          position: absolute;
+          top: 10px;
+          left: -5px;
+        }
+      }
+    }
+  }
+}
+
+#clients {
+  position: relative;
+  text-align: center;
+  img.bg {
+    margin-top: 88px;
+  }
+  color: #666666;
+  font-size: 17px;
+  line-height: 1.5em;
+  .text1 {
+    position: absolute;
+    text-align: right;
+    top: 430px;
+    left: 60px;
+    width: 180px;
+  }
+  .text2 {
+    position: absolute;
+    text-align: left;
+    top: 430px;
+    right: 60px;
+    width: 180px;
+  }
+}
+
+#contacts {
+  position: relative;
+  #mapHover {
+    position: absolute;
+    left: 35px;
+    top: 135px;
+    background: #fff;
+    width: 350px;
+    padding: 35px 55px;
+    h1 {
+      color: #4fa547;;
+      font-size: 25px;
+      margin-bottom: 35px;
+      font-family: 'GeorgiaBold';
+    }
+    h2 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      margin-top: 16px;
+      font-family: 'GeorgiaBold';
+    }
+    a {
+      color: #000;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    strong {
+      display: block;
+      font-size: 28px;
+      padding-bottom: 10px;
+      font-family: 'GaramondBold';
+    }
+  }
+}
+
+.hover {
+  display: none;
+}
+
+#portfolios {
+  text-align: center;
+  menu {
+    margin: 25px 0;
+    list-style: none;
+    display: inline-block;
+
+    padding: 0;
+    border: 1px solid #dcdada;
+    li {
+     display: inline-block;
+      border-left: 1px solid #dcdada;
+      &:first-child {border: none;}
+      margin: -1px;
+      a {
+        position: relative;
+        display: block;
+        padding: 12px 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'GaramondBold';
+        font-weight: bold;
+        color: #000;
+        &:hover, &.selected {
+          color: #fff;
+          background: #4fa547;
+          &:before {
+            content: '';
+            position: absolute;
+            background: url("arrow-down.png");
+            width: 7px;
+            height: 4px;
+            bottom: -4px;
+            left: 50%;
+            margin-left: -3px;
+          }
+        }
+      }
+    }
+  }
+  ul#portfolioItems {
+    padding: 0;
+    margin: 0 auto;
+    width: 948px;
+    list-style: none;
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      margin: 5px;
+
+      img {display: block;}
+      &.cap {
+        height: 227px;
+        width: 227px;
+        background: #efefef;
+      }
+      .no-touch &:hover .hover {
+        display: table;
+      }
+      .hover {
+        position: absolute;
+        text-align: center;
+        width: 227px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(65, 152, 55, 0.8);
+        h2 {
+          display: table-cell;
+          width: 227px;
+          height: 227px;
+          vertical-align: middle;
+          font-size: 21px;
+          color: #fff;
+          font-family: 'GaramondBold';
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+time {
+  display: inline-block;
+  vertical-align: top;
+  .date {
+    font-size: 50px;
+    font-family: 'GaramondRegular';
+    line-height: 1em;
+  }
+  .month {
+    font-size: 14px;
+    font-family: 'ArialRegular';
+    text-transform: uppercase;
+    line-height: 1.3em;
+  }
+  .year {
+    font-size: 12px;
+    font-family: 'ArialRegular';
+  }
+}
+
+
+#news {
+  .new {
+    margin-top: 40px;
+    margin-left: 60px;
+    time{
+      text-align: right;
+    }
+    img {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 30px;
+    }
+    .content {
+      display: inline-block;
+      vertical-align: top;
+      width: 440px;
+      font-size: 15px;
+      line-height: 1.8em;
+      h2 {
+        font-weight: normal;
+        font-family: 'GeorgiaRegular';
+        color: #4fa547;
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+    }
+    a.more {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #4fa547;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+      font-family: 'EB Garamond', serif;
+    }
+  }
+}
+
+#portfolio {
+  position: relative;
+  a.prev {
+    position: absolute;
+    background: url("arrow-left.png");
+    width: 29px;
+    height: 21px;
+    top: 35px;
+    right: 70px;
+  }
+  a.next {
+    position: absolute;
+    background: url("arrow-right.png");
+    width: 29px;
+    height: 21px;
+    top: 35px;
+    right: 30px;
+  }
+  padding-top: 30px;
+  .left {
+    float: left;
+    width: 200px;
+  }
+  img.teaser {
+    display: block;
+  }
+  time {
+    margin-top: 36px;
+    color: #b0b0b0;
+    display: block;
+    width: 200px;
+    text-align: center;
+    .month, .year {font-family: Arial; text-transform: uppercase}
+
+
+  }
+  .container {
+    float: right;
+    margin-right: 30px;
+    width: 702px;
+    h1 {
+      margin-top: 0;
+      color: #4fa547;;
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 15px;
+      width: 600px;
+    }
+    h2 {
+      margin: 30px 0 5px;
+      font-size: 15px;
+      font-family: 'GeorgiaBold';
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 1.8em;
+    }
+    ul.fancy {
+      list-style: none;
+      margin: 20px -5px;
+      padding: 0;
+      li {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+        img {
+          display: block;
+          width: 227px;
+          height: 227px;
+        }
+      }
+    }
+  }
+}
+
+#services {
+  table {
+    margin: 30px;
+  }
+  td {
+    width: 153px;
+    height: 153px;
+    padding: 2px;
+    vertical-align: middle;
+    img {display: block}
+    p {
+      color: #999999;
+      font-size: 13px;
+      padding: 0 50px;
+      &.right {text-align: right}
+    }
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: inherit;
+      &.polygraphy:before {background-image: url("service-1.png")}
+      &.gifts:before {background-image: url("service-4.png")}
+      &.textile:before {background-image: url("service-2.png")}
+      &.posm:before {background-image: url("service-5.png")}
+      &.corporate_gifts:before {background-image: url("service-3.png")}
+      &:before {
+        content: '';
+        display: inline-block;
+        background: url("service-0.png") no-repeat center;
+        width: 100%;
+        height: 68px;
+      }
+    }
+    a {
+      display: table-cell;
+      width: 153px;
+      height: 153px;
+      background: #4fa547;;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      font-family: 'GaramondBold';
+      font-size: 14px;
+      text-transform: uppercase;
+
+
+    }
+  }
+}
+
+#why {
+  padding: 30px;
+  padding-left: 18px;
+  padding-right: 0;
+  .col {
+    margin-left: 12px;
+    border: 1px solid #dcdada;
+
+    float: left;
+    .row {
+      display: table;
+      width: 225px;
+      height: 225px;
+      background: #f5f5f5;
+      position: relative;
+      &.green {
+        background: #4fa547;
+        &.top:before {
+          content: '';
+          position: absolute;
+          background: url("arrow-lg-down.png");
+          width: 15px;
+          height: 8px;
+          bottom: -8px;
+          left: 50%;
+          margin-left: -7px;
+          z-index: 100;
+        }
+        &.bottom:before {
+          content: '';
+          position: absolute;
+          background: url("arrow-lg-up.png");
+          width: 15px;
+          height: 8px;
+          top: -8px;
+          left: 50%;
+          margin-left: -7px;
+          z-index: 100;
+        }
+      }
+    }
+    h2 {
+      display: table-cell;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'GaramondBold';
+      font-size: 17px;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 20px;
+      font-size: 17px;
+      color:#666666;
+    }
+  }
+}
+
+#main {
+  ul#mainGallery {
+    list-style: none;
+    line-height: 0;
+    margin: -2px;
+    padding: 30px;
+    position: relative;
+
+    li {
+      display: block;
+      position: absolute;
+      float: left;
+      width: 153px;
+      height: 153px;
+      margin: 2px;
+      &#img-1 {
+        top: 30px;
+        left: 30px;
+        width: 153px;
+        height: 153px;
+      }
+      &#img-2 {
+        top: 30px;
+        left: 30px + 4px + 153px;
+        width: 310px;
+        height: 310px;
+      }
+      &#img-3 {
+        top: 30px;
+        left: 30px + 4px + 153px + 310px + 4px;
+      }
+      &#img-4 {
+        top: 30px;
+        left: 30px + 4px + 153px + 310px + 4px + 153px + 4px;
+      }
+      &#img-5 {
+        top: 30px;
+        left: 30px + 4px + 153px + 310px + 4px + 153px + 4px + 153px + 4px;
+      }
+      &#img-6 {
+        top: 30px + 153px + 4px;
+        left: 30px;
+
+      }
+      &#img-7 {
+        top: 30px + 153px + 4px;
+        left: 30px + 153px + 4px + 310px + 4px;
+        width: 310px;
+
+      }
+      &#img-8 {
+        top: 30px + 153px + 4px;
+        left: 30px + 153px + 4px + 310px + 4px + 310px + 4px;
+
+      }
+      &#img-9 {
+        top: 30px + 153px + 4px + 153px + 4px;
+        left: 30px;
+        width: 310px;
+
+      }
+      &#img-10 {
+        top: 30px + 153px + 4px + 153px + 4px;
+        left: 30px + 310px + 4px;
+
+      }
+      &#img-11 {
+        top: 30px + 153px + 4px + 153px + 4px;
+        left: 30px + 310px + 4px + 153px + 4px;
+      }
+      &#img-12 {
+        top: 30px + 153px + 4px + 153px + 4px;
+        left: 30px + 310px + 4px + 153px + 4px + 153px + 4px;
+        width: 310px;
+        height: 310px;
+      }
+      &#img-13 {
+        top: 30px + 153px + 4px + 153px + 4px + 153px + 4px;
+        left: 30px;
+      }
+      &#img-14 {
+        top: 30px + 153px + 4px + 153px + 4px + 153px + 4px;
+        left: 30px + 153px + 4px;
+        width: 310px;
+      }
+      &#img-15 {
+        top: 30px + 153px + 4px + 153px + 4px + 153px + 4px;
+        left: 30px + 153px + 4px + 310px + 4px;
+      }
+
+
+
+
+      &:hover:before {
+        display: none;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,.5);
+      }
+
+      a {
+        display: block;
+        img {display: block}
+      }
+    }
+  }
+}
+
+
+#team {
+  ul#teamList {
+    list-style: none;
+    padding: 25px;
+    li {
+      display: block;
+      float: left;
+      width: 227px;
+      height: 227px;
+      margin: 5px;
+      position: relative;
+      a {display: block; width: 100%; height: 100%}
+      img {display: block;}
+      &.cap {
+        height: 227px;
+        width: 227px;
+        background: #efefef;
+      }
+      .no-touch &:hover {
+        .hover {
+          display: table;
+        }
+      }
+
+      .hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 227px;
+        width: 227px;
+        .cell {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          height: 227px;
+          width: 227px;
+          background: rgba(79, 165, 71, .8);
+          font-family: 'GaramondBold';
+          h2 {
+            line-height: 1.2em;
+            font-family: inherit;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+          }
+          h3 {
+            line-height: 1.2em;
+            font-family: inherit;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+        }
+
+
+      }
+      .full {display: none;}
+    }
+
+  }
+}
+
+#service {
+  padding: 30px;
+  ul#serviceMenu {
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: 338px;
+    margin-left: -10px;
+
+    li {
+      display: table;
+      float: left;
+      margin-left: 4px;
+      margin-bottom: 4px;
+      border: 1px solid #dcdada;
+      width: 151px;
+      height: 151px;
+      &.active {
+        background: #4fa547;
+        color: #fff;
+        a:before {
+          background: url("service-0.png") no-repeat center;
+        }
+        a.polygraphy:before {background-image: url("service-1.png")}
+        a.gifts:before {background-image: url("service-4.png")}
+        a.textile:before {background-image: url("service-2.png")}
+        a.posm:before {background-image: url("service-5.png")}
+        a.corporate_gifts:before {background-image: url("service-3.png")}
+      }
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        font-family: 'GaramondBold';
+        font-size: 14px;
+        &.polygraphy:before {background-image: url("service-1-g.png")}
+        &.gifts:before {background-image: url("service-4-g.png")}
+        &.textile:before {background-image: url("service-2-g.png")}
+        &.posm:before {background-image: url("service-5-g.png")}
+        &.corporate_gifts:before {background-image: url("service-3-g.png")}
+        &:before {
+          content: '';
+          display: inline-block;
+          background: url("service-0-g.png") no-repeat center;
+          width: 100%;
+          height: 68px;
+        }
+      }
+    }
+  }
+  #content {
+    float: left;
+    width: 420px;
+    h1 {
+      margin-top: 0;
+      color: #4fa547;;
+      font-size: 25px;
+      font-family: 'GeorgiaRegular';
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.8em;
+      margin-bottom: 20px;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #4fa547;;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-size: 13px;
+      font-family: 'GaramondBold';
+    }
+
+  }
+  ul.pics {
+    padding: 0;
+    list-style: none;
+    float: right;
+    width: 153px;
+    li {
+      margin-bottom: 4px;
+      img {
+        display: block;
+        height: 153px;
+        width: 153px;
+
+      }
+    }
+  }
+}
+
+.container-modal {
+  width: 370px + 335px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -360px;
+  background: #fff;
+  padding: 40px;
+  a.close {
+    position: absolute;
+    color: #a6a6a6;
+    top: 5px;
+    right: 8px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .left {
+    float: left;
+    width: 315px;
+    img {
+      display: block;
+      border: 1px solid #e9e9e9;
+      width: 315px;
+    }
+  }
+  .right {
+    float: right;
+    width: 370px;
+    h2 {
+      font-family: 'GaramondBold';
+      font-size: 26px;
+      text-transform: uppercase;
+      color: #4fa547;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 19px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5em;
+      margin-top: 20px;
+    }
+  }
+
+
+}
+
+.modal {display: none}
+
+
+
+
+
+

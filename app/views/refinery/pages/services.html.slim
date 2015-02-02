@@ -1,0 +1,38 @@
+- p = Refinery::Blog::Post.order("RANDOM()").limit(7)
+#services
+  table cellspacing=5
+    tr
+      td colspan=2
+        p.right = raw @page.content_for(:body)
+      td
+        = image_tag(@page.images.first.thumbnail(geometry: "153x153#c").url) if @page.images.first
+      td
+        = link_to Refinery::Page.where(:slug => 'services').first.children.first.title, "/services/#{Refinery::Page.where(:slug => 'services').first.children.first.slug}", class: Refinery::Page.where(:slug => 'services').first.children.first.slug
+      td
+        = image_tag(@page.images.second.thumbnail(geometry: "153x153#c").url) if @page.images.second
+      td
+    tr
+      td
+        = image_tag(@page.images.third.thumbnail(geometry: "153x153#c").url) if @page.images.third
+      td
+        = link_to Refinery::Page.where(:slug => 'services').first.children.second.title, "/services/#{Refinery::Page.where(:slug => 'services').first.children.second.slug}", class: Refinery::Page.where(:slug => 'services').first.children.second.slug
+      td
+        = link_to Refinery::Page.where(:slug => 'services').first.children.third.title, "/services/#{Refinery::Page.where(:slug => 'services').first.children.third.slug}", class: Refinery::Page.where(:slug => 'services').first.children.third.slug
+      td: a href="/"
+      td
+        = link_to Refinery::Page.where(:slug => 'services').first.children.fourth.title, "/services/#{Refinery::Page.where(:slug => 'services').first.children.fourth.slug}", class: Refinery::Page.where(:slug => 'services').first.children.fourth.slug
+      td
+        = image_tag(@page.images.fourth.thumbnail(geometry: "153x153#c").url) if @page.images.fourth
+    tr
+      td
+      td
+        = image_tag(@page.images[4].thumbnail(geometry: "153x153#c").url) if @page.images[4]
+      td
+        = image_tag(@page.images[5].thumbnail(geometry: "153x153#c").url) if @page.images[5]
+      td
+        = link_to Refinery::Page.where(:slug => 'services').first.children.fifth.title, "/services/#{Refinery::Page.where(:slug => 'services').first.children.fifth.slug}", class: Refinery::Page.where(:slug => 'services').first.children.fifth.slug
+      td colspan=2
+        = raw @page.content_for(:side_body)
+
+
+style {}

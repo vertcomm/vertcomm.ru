@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GeorgiaRegular';
+    src: url('georgia.eot');
+    src: url('georgia.eot') format('embedded-opentype'),
+         url('georgia.woff') format('woff'),
+         url('georgia.ttf') format('truetype'),
+         url('georgia.svg#GeorgiaRegular') format('svg');
+}
