@@ -10,7 +10,7 @@ html
   body oncontextmenu="return false;"
     #wrapper
       header
-        - href = Refinery::Resource.where(:file_name => 'Presentation_Vertcomm.pdf').first.url || '#'
+        - href = Refinery::Resource.where(:file_name => 'Presentation.pdf').first.url || '#'
         a#logo href="/"
         /a#presentation target='_blank' onclick="window.open('#{href}', 'newwin');" href="#" Презентация
         a#presentation target='_blank'  href="/Presentation_Vertcomm.pdf" Презентация
